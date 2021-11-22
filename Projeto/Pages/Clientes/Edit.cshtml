@@ -5,35 +5,39 @@
 
 <p class="text-danger">@Model.Erro</p>
 
-<div class="row">
+<div class="container">
     <h4>✏ Edição de Cliente</h4>
     <hr />
 
+    <div class="row">
 
-    <form method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Cliente.Nome)
-            @Html.TextBoxFor(m => m.Cliente.Nome, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Cliente.Nome)
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Cliente.Email)
-            @Html.TextBoxFor(m => m.Cliente.Email, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Cliente.Email)
-        </div>
-            
-        <div class="form-group">
-            @Html.LabelFor(m => m.Cliente.DataNascimento)
-            @Html.TextBoxFor(m => m.Cliente.DataNascimento, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Cliente.DataNascimento)
-        </div>
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Cliente.Nome)
+                @Html.TextBoxFor(m => m.Cliente.Nome, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Cliente.Nome)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Cliente.Email)
+                @Html.TextBoxFor(m => m.Cliente.Email, new { @class = "form-control", Attribute = "readonly" })
+                @Html.ValidationMessageFor(model => model.Cliente.Email)
+            </div>
 
-        <div class="form-group">
-            @Html.HiddenFor(model => model.Cliente.Id)
-            <input type="submit" value="Confirmar Edição" class="btn btn-primary" /> |
-            <a asp-page="./Index">Voltar para Lista</a>
-        </div>
-    </form>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Cliente.DataNascimento)
+                @Html.TextBoxFor(m => m.Cliente.DataNascimento, new { @class = "form-control"})
+                @Html.ValidationMessageFor(model => model.Cliente.DataNascimento)
+            </div>
+
+            <div class="form-group">
+                @Html.HiddenFor(model => model.Cliente.Id)
+                <input type="submit" value="Confirmar Edição" class="btn btn-primary" /> |
+                <a asp-page="./Index">Voltar para Lista</a>
+            </div>
+            <p class="text-success">@Model.Message</p>
+
+        </form>
+    </div>
 
 </div>

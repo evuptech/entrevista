@@ -15,7 +15,7 @@ namespace Projeto.Pages.Clientes
         {
             using var connection = new SQLiteConnection($"Data Source=banco.db");
 
-            this.Clientes = connection.Query<Cliente>("SELECT id, nome, data_nascimento as dataNascimento, email FROM cliente").ToList();
+            this.Clientes = connection.Query<Cliente>("SELECT id, nome, data_nascimento as DataNascimento, email FROM cliente").ToList();
 
         }
     }

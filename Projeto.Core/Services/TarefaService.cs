@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Text;
+using System.Linq;
 
 namespace Projeto.Core.Services
 {
@@ -23,12 +24,12 @@ namespace Projeto.Core.Services
 
         public void Delete(Tarefa entity)
         {
-            throw new NotImplementedException();
+            _connection.Query<Tarefa>("DELETE * FROM tarefa where id = @id", new { id = entity.Id });
         }
 
         public Tarefa GetById(int id)
         {
-            throw new NotImplementedException();
+            return _connection.Query<Tarefa>("SELECT * FROM tarefa where id = @id", new { id }).SingleOrDefault();
         }
 
         public void Insert(Tarefa entity)

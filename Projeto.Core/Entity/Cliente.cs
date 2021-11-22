@@ -19,7 +19,7 @@ namespace Projeto.Core.Entity
         public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        [MaxLength(12, ErrorMessage = "O limite máximo de caracteres para o campo foi atingido.")]
+        [MaxLength(120, ErrorMessage = "O limite máximo de caracteres para o campo foi atingido.")]
         [Display(Name = "E-mail")]
         public string Email { get; set; }
     }
