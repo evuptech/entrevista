@@ -68,43 +68,6 @@ git commit -m "Entregando o teste"
 
 Agora, temos duas maneiras de entregar seu código fonte para ser analisado (submetendo seu branch para o servidor ou enviando os arquivos compactados para o analista da entrevista).
 
-#### 3.4 🔓 Submetendo seu branch para o servidor remoto
-
-3.4.1- Para enviar seu branch para o servidor, você precisa primeiro ter um e-mail cadastrado no github (Pode ser criado por esse link: https://github.com/signup).
-
-3.4.2- Depois esse e-mail precisa ter sido adicionado ao repositório por um administrador (solicite para a pessoa que lhe enviou o teste o acesso, passando seu e-mail para ela).
-
-3.4.3- Faça login no github em seu ambiente de trabalho local com o e-mail cadastrado. O comando para login é o seguinte:
-
-PS: caso não tenha instalado o Github CLI na sua máquina, pode seguir as instruções desse link: https://docs.github.com/pt/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
-```
-gh auth login
-```
-(siga o passo-a-passo até concluit o login).
-
-
-3.4.4- Faça o push do seu branch para nosso repositório:
-```
-git push --set-upstream origin candidato/seu-nome
-```
-
-O resultado deverá ser algo parecido com este:
-
-![image](https://user-images.githubusercontent.com/94454745/142252583-01af8fc3-eb4d-4a4d-9ad5-45e681f81a4a.png)
-
-
-
-
-3.4.5- E por último faça o push para enviar seu código ao servidor:
-
-```
-git push
-```
-
-O resultado esperado de todos os comando acima:
-
-![image](https://user-images.githubusercontent.com/94454745/142252906-54b934b5-2035-412d-9140-916d8eedfbc6.png)
-
 #### 3.5🗜️ Enviando a pasta do projeto compactada como zip
 
 3.5.1- Compacte a pasta ./entrevista com todos os arquivos dentro (pode usar a extensão .zip ou .rar)
